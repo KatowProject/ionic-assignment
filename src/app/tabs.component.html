@@ -1,0 +1,23 @@
+<ion-tabs>
+  <ion-router-outlet></ion-router-outlet>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="welcome">
+      <ion-icon name="alert-outline"></ion-icon>
+      Welcome
+    </ion-tab-button>
+    <ion-tab-button tab="home">
+      <ion-icon name="home-outline"></ion-icon>
+      Home
+    </ion-tab-button>
+    <ion-tab-button tab="news">
+      <!-- news -->
+      <ion-icon name="newspaper-outline"></ion-icon>
+      News
+    </ion-tab-button>
+    <ion-tab-button tab="logout" (click)="logout()">
+      <ion-icon name="log-out-outline"></ion-icon>
+      Logout
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

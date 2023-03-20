@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  html: boolean;
+  constructor() {
+    // check route
+    const routePath = window.location.pathname;
+    if (routePath === '/login') {
+      this.html = false;
+    } else {
+      this.html = true;
+    }
+  }
+
+  ngOnInit() {
+    console.log('AppComponent');
+  }
 }

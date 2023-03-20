@@ -16,17 +16,8 @@ export class HomePage {
   constructor(private db: StorageService, private router: Router) {
     const username = this.db.get('username');
     const password = this.db.get('password');
-
-    if (username && password) {
-      this.router.navigateByUrl('welcome');
+    if (!username) {
+      this.router.navigateByUrl('login');
     }
-  }
-
-  login(): void {
-    const { username, password } = this.form;
-    this.db.set('username', username);
-    this.db.set('password', password);
-
-    this.router.navigateByUrl('welcome');
   }
 }
