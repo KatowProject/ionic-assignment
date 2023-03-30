@@ -31,7 +31,7 @@ export class TabsComponent {
           role: 'cancel',
           cssClass: 'secondary',
           handler: (blah) => {
-            this.router.navigateByUrl('home');
+
           }
         },
         {

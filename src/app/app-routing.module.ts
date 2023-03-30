@@ -1,4 +1,3 @@
-import { LogoutComponent } from './logout/logout.component';
 import { TabsComponent } from './tabs.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
@@ -23,12 +22,8 @@ const routes: Routes = [
         loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
       },
       {
-        path: 'welcome',
-        loadChildren: () => import('./welcome/welcome.module').then(m => m.WelcomePageModule)
-      },
-      {
-        path: 'logout',
-        component: LogoutComponent
+        path: 'news',
+        loadChildren: () => import('./news/news.module').then(m => m.NewsPageModule)
       }
     ]
   },

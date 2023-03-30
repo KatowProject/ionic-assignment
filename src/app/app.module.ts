@@ -1,4 +1,3 @@
-import { LogoutComponent } from './logout/logout.component';
 import { TabsComponent } from './tabs.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
@@ -11,6 +10,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
     LoginComponent,
     TabsComponent
   ],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, ScrollingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

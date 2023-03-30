@@ -1,20 +1,20 @@
+import { ScrollingModule } from '@angular/cdk/scrolling';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
+import { NewsPageRoutingModule } from './news-routing.module';
 
-import { WelcomePageRoutingModule } from './welcome-routing.module';
-
-import { WelcomePage } from './welcome.page';
+import { NewsPage } from './news.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    WelcomePageRoutingModule
+    NewsPageRoutingModule,
+    ScrollingModule
   ],
-  declarations: [WelcomePage]
+  declarations: [NewsPage]
 })
-export class WelcomePageModule {}
+export class NewsPageModule { }
