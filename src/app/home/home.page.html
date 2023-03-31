@@ -3,7 +3,11 @@
   <div id="container">
     <!-- welcome -->
 
-    <h1><b>Welcome</b></h1>
+    <h1><b>Welcome {{ name }}!</b></h1>
+
+    <!-- click me button -->
+    <ion-button (click)="clickMe()" color="secondary"><ion-icon slot="start" name="happy"></ion-icon>Click
+      Me</ion-button>
   </div>
 
 </ion-content>

@@ -1,3 +1,4 @@
+import { AlertController } from '@ionic/angular';
 import { Component } from '@angular/core';
 import { StorageService } from '../localStorage';
 import { Router } from '@angular/router';
@@ -13,11 +14,23 @@ export class HomePage {
     password: ''
   }
 
-  constructor(private db: StorageService, private router: Router) {
+  name: string;
+
+  constructor(private db: StorageService, private router: Router, private alertController: AlertController) {
     const username = this.db.get('username');
     const password = this.db.get('password');
     if (!username) {
       this.router.navigateByUrl('login');
     }
+
+    this.name = username;
+  }
+
+  clickMe() {
+    this.alertController.create({
+      header: 'Alert',
+      subHeader: 'Warning',
+      message: 'Hello World',
+    }).then(alert => alert.present());
   }
 }
